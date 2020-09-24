@@ -17,8 +17,9 @@ cnt_up   = 0
 cnt_down = 0
 
 #Fuente de video
-#cap = cv.VideoCapture(0)
-cap = cv.VideoCapture('Test Files/TestVideo.avi')
+# cap = cv.VideoCapture('Test Files/TestVideo.avi')
+# Para usar a webcam embutida, (0); cameras externas, (1), mas não sei como configurar exatamente as externas
+cap = cv.VideoCapture(0) 
 #camera = PiCamera()
 ##camera.resolution = (160,120)
 ##camera.framerate = 5
@@ -48,6 +49,7 @@ down_limit = int(4*(h/5))
 
 print( "Red line y:",str(line_down))
 print( "Blue line y:", str(line_up))
+# Cores em BGR
 line_down_color = (255,0,0)
 line_up_color = (0,0,255)
 pt1 =  [0, line_down];
